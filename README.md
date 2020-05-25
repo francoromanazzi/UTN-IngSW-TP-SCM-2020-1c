@@ -1,4 +1,4 @@
-JPet Store Sample
+JPet Store Sample - TP Ing SW SCM
 ========================================
 
 This sample shows how easy to integrate [Doma][doma] with  [Spring Boot][spring-boot] .
