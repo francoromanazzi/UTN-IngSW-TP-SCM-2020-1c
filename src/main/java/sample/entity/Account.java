@@ -8,7 +8,7 @@ import org.seasar.doma.Metamodel;
 import org.seasar.doma.Transient;
 
 @Entity(metamodel = @Metamodel)
-public class Account implements Serializable {
+public class {
 
   private static final long serialVersionUID = 1L;
 
