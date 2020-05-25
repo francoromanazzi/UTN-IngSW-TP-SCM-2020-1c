@@ -37,6 +37,8 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
+
+      - run: gradle build
 workflows:
   version: 2
   mipipeline:
