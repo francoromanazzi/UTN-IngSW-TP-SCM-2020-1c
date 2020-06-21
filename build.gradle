@@ -5,6 +5,7 @@ plugins {
     id "org.springframework.boot" version "1.5.22.RELEASE"
     id "org.seasar.doma.compile" version "1.0.0"
     id "org.sonarqube" version "2.7"
+    id 'jacoco'
 }
 
 version = "2.36.0-beta-1"
@@ -30,6 +31,7 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven { url "https://repo.spring.io/milestone" }
+    jcenter()
 }
 
 dependencies {
@@ -43,7 +45,18 @@ dependencies {
     implementation("com.h2database:h2")
     implementation("org.webjars:jquery:2.1.1")
     compileOnly("org.springframework.boot:spring-boot-devtools")
-    testImplementation("junit:junit")
+    testImplementation(
+            'junit:junit:4.12',
+            'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    )
+    testRuntime(
+            'org.junit.jupiter:junit-jupiter-engine:5.4.2',
+            'org.junit.vintage:junit-vintage-engine:5.4.2'
+    )
+}
+
+test {
+    useJUnitPlatform()
 }
 
 eclipse {
@@ -61,5 +74,13 @@ eclipse {
     }
     jdt {
         javaRuntimeName = 'JavaSE-11'
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled true
     }
 }
