@@ -23,7 +23,7 @@ pipeline {
 
         stage('Jacoco') {
           steps {
-            sh 'ls'
+            sh './gradlew -i test jacocoTestReport'
           }
         }
 
