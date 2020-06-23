@@ -1,9 +1,9 @@
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import sample.model.Cart;
+import org.junit.jupiter.api.Test;
 import sample.entity.Item;
+import sample.model.Cart;
 
 public class TestModel {
 
